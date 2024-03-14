@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bool-body-backgc-top: #019689FF;
+    --bool-body-backgc-bottom: #dbdad5;
+    --bool-main-account: #ebeaeb;
+    --bool-notification-backgc: #8edafcFF;
+    --bool-notification-text: #17232a;
+    --bool-notification-link: #5a7e8b;
+    --bool-search: #7b808c;
+    --bool-message-text: #c9d7e9;
+    --bool-sent-backgc: #d4f9bb;
+    --bool-recived-backgc: #fffefe;
+    --bool-action: #b0b0b1;
+}
+
+/* Body */
+body {
+    /* --> Da aggiungere il comando per la sfumatura */
+    background-image: linear-gradient(to bottom, #019689FF 0%, #019689FF 120px, #dbdad5 120px, #dbdad5 100%);
+    height: 100vh;
+}
+
+/* /Body */
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    width: 80%;
+    height: 100%;
+    padding: 80px 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* /Main Container */
+
+
+/* Container Left */
+.container_left{
+    height: 100%;
+}
+
+.left_sections {
+    width: 350px;
+    overflow-y: scroll;
+}
+
+/* Account Section */
+.account {
+    background-color: var(--bool-main-account);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    padding-right: 1rem;
+    color: var(--bool-action);
+}
+
+.profile_img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 1rem;
+}
+/* /Account Section */
+
+/* Notification Section */
+.notifications {
+    padding: 1rem;
+    background-color: var(--bool-notification-backgc);
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.bell {
+    background-color: white;
+    color: var(--bool-notification-backgc);
+    border-radius: 50%;
+    padding: 0.9rem;
+}
+
+.notification_text {
+    display: flex;
+    flex-direction: column;
+}
+/* /Notification Section */
+
+/* Search Section */
+.search {
+    padding: 1rem;
+    background-color: var(--bool-main-account);
+    border-bottom: 1px solid var(--bool-action);
+}
+
+.search_box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--bool-recived-backgc);
+    padding: 0.5rem;
+    color: var(--bool-action);
+}
+
+#search {
+    height: 20px;
+    width: 95%;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+}
+/* /Search Section */
+
+/* Contacts Section */
+.contacts {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--bool-action);
+}
+
+.meta {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.img_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts_text,
+.hour {
+    color: var(--bool-message-text);
+}
+/* /Contacts Section */
+/* /Container Left */
+
+
+/* /Container Right */
+.container_right{
+    height: 100%;
+}
+
+.right_sections{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Account Section */
+.contact_name {
+    background-color: var(--bool-main-account);
+    width: 650px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid gray;
+}
+
+.utility{
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+}
+
+#access {
+    color: var(--bool-search);
+}
+
+.utilitys {
+    color: var(--bool-action);
+    align-items: center;
+}
+/* /Account Section */
+
+/* Messages Section */
+.messages {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex-grow: 1;
+    background: url(../img/mine.jpg);
+    gap: 1rem;
+}
+
+
+.sent,
+.recived {
+    width: 350px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: var(--bool-sent-backgc);
+}
+
+.recived {
+    align-self: flex-start;
+    background-color: var(--bool-recived-backgc);
+}
+/* /Messages Section */
+
+/* Messages Box Section */
+.message_box{
+    display: flex;
+    background-color: var(--bool-main-account);
+    align-items: center;
+    gap: 2rem;
+    height: 50px;
+}
+
+.smile{
+    padding-left: 1rem;
+}
+
+.microphone{
+    padding-right: 1rem;
+}
+
+.microphone, .smile{
+    text-align: center;
+    color: var(--bool-action);
+}
+
+.message{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    > input {
+        height: 30px;
+        border-radius: 0.5rem;
+        border: none;
+        width: 100%;
+        padding: 0 1rem;
+      }
+}
+/* /Messages Box Section */
+/* /Container Right */
+
+/* Meta for Tablet */
+@media screen and (max-width: 991px) {
+    .account {}
+
+    .notifications,
+    .search,
+    .img_text,
+    .actions {
+        display: none;
+    }
+
+    .left_sections {
+        width: 100px;
+    }
+}
+
+/* /Meta for Tabet */
+
+
+/* Meta for Mobile */
+@media screen and (max-width: 540px) {
+    .left_sections, .utilitys, .microphone, .smile
+    {
+        display: none;
+    }
+    
+    .message_box{
+        padding: 0.5rem;
+    }
+}
+
+/* /Meta for Mobile */
