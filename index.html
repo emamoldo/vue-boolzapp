@@ -21,7 +21,7 @@
         <div class="container_left">
             <div class="left_sections">
                 <div class="account">
-                    
+
                     <div class="user">
                         <img class="profile_img" src="./assets/img/avatar_io.jpg" alt="user image">
                         <strong class="user_name">Sofia</strong>
@@ -57,63 +57,19 @@
                 <!-- /Search Part -->
 
                 <!-- Contacts Part -->
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_1.jpg" alt="">
-                    <div class="meta">
-                        <div class="img_text">
-                            <strong class="name">Michele<p class="hour">16:15</p></strong>
-                            <div class="contacts_text">Lorem ipsum dolor sit amet.</div>
+                <div id="contacts">
+                    <section class="contacts" v-for="contact in contacts">
+                        <!-- <img class="profile_img" src="./assets/img/avatar_1.jpg" alt=""> -->
+                        <img class="profile_img" v-bind:src="contacts[activeImage].image" alt=""/>
+                        <div class="meta">
+                            <div class="img_text">
+                                <strong class="name">{{contact.name}}<p class="hour">{{contact.hour}}</p></strong>
+                                <div class="contacts_text">{{contact.message}}</div>
+                            </div>
                         </div>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_2.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Fabio<p class="hour">16:05</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_3.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Samuele <p class="hour">16:03</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_4.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Alessando B. <p class="hour">15:50</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_5.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Alessandro L. <p class="hour">15:45</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_6.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Giulia <p class="hour">14:30</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
-
-                <section class="contacts">
-                    <img class="profile_img" src="./assets/img/avatar_7.jpg" alt="">
-                    <div class="img_text">
-                        <strong class="name">Lorenzo <p class="hour">14:00</p></strong>
-                        <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </section>
+                    </section>
+                </div>
+                <!-- TODO: Search how to fix the images -->
 
                 <!-- /Contacts Part -->
 
