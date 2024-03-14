@@ -8,7 +8,7 @@
         integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=='
         crossorigin='anonymous' referrerpolicy='no-referrer' />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Boolzapp</title>
+    <title>Vue Boolzapp</title>
 </head>
 
 <body>
@@ -21,7 +21,12 @@
         <div class="container_left">
             <div class="left_sections">
                 <div class="account">
-                    <img class="profile_img" src="./assets/img/avatar_io.jpg" alt="">
+                    
+                    <div class="user">
+                        <img class="profile_img" src="./assets/img/avatar_io.jpg" alt="user image">
+                        <strong class="user_name">Sofia</strong>
+                    </div>
+
                     <div class="actions">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -56,9 +61,8 @@
                     <img class="profile_img" src="./assets/img/avatar_1.jpg" alt="">
                     <div class="meta">
                         <div class="img_text">
-                            <strong class="name">Michele</strong>
+                            <strong class="name">Michele<p class="hour">16:15</p></strong>
                             <div class="contacts_text">Lorem ipsum dolor sit amet.</div>
-                            <div class="hour">16:15</div>
                         </div>
                     </div>
                 </section>
@@ -66,7 +70,7 @@
                 <section class="contacts">
                     <img class="profile_img" src="./assets/img/avatar_2.jpg" alt="">
                     <div class="img_text">
-                        <strong class="name">Fabio <p class="hour">16:05</p></strong>
+                        <strong class="name">Fabio<p class="hour">16:05</p></strong>
                         <p class="contacts_text">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </section>
