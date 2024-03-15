@@ -51,5 +51,12 @@ createApp({
                 },
             ]
         }
+    },
+    methods: {
+        next() {
+            console.log('prossimo contatto');
+            // at the click in the .contact_name the program need to change the name, the img and the access
+            // after doing that the click had to change the messagges in the chat
+        }
     }
 }).mount('#contacts')

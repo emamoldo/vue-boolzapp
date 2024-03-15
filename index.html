@@ -58,9 +58,9 @@
 
                 <!-- Contacts Part -->
                 <div id="contacts">
-                    <section class="contacts" v-for="contact in contacts">
+                    <section class="contacts" @click="next()" v-for="contact in contacts">
                         <!-- <img class="profile_img" src="./assets/img/avatar_1.jpg" alt=""> -->
-                        <img class="profile_img" v-bind:src="contacts[activeImage].image" alt=""/>
+                        <img class="profile_img" v-bind:src="contacts[activeImage].image" alt="" />
                         <div class="meta">
                             <div class="img_text">
                                 <strong class="name">{{contact.name}}<p class="hour">{{contact.hour}}</p></strong>
@@ -99,6 +99,7 @@
                 <!-- /Account Part -->
 
                 <!-- Messages Part -->
+
                 <section class="messages">
                     <div class="sent">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
@@ -109,21 +110,33 @@
                         repellendus praesentium atque culpa possimus quaerat eaque?
                     </div>
                 </section>
-                <!-- /Messages Part -->
 
-                <!-- Messages Box Part -->
-                <div class="message_box">
-                    <div class="smile">
-                        <i class="far fa-smile"></i>
+                <!-- Try to use message in messages doing another createApp in Js -->
+                <!-- <section class="messages" v-for="contact in contacts">
+                    <div class="sent">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
+                        commodi illum temporibus voluptates iste nostrum laudantium.
                     </div>
-                    <div class="message">
-                        <input type="text" placeholder="Scrivi un messaggio">
-                    </div>
-                    <div class="microphone">
-                        <i class="fas fa-microphone"></i>
-                    </div>
+                    <div class="recived">
+                        {{contact.message}}
+                    </div> -->
+
+            </div>
+            <!-- /Messages Part -->
+
+            <!-- Messages Box Part -->
+            <div class="message_box">
+                <div class="smile">
+                    <i class="far fa-smile"></i>
+                </div>
+                <div class="message">
+                    <input type="text" placeholder="Scrivi un messaggio">
+                </div>
+                <div class="microphone">
+                    <i class="fas fa-microphone"></i>
                 </div>
             </div>
+        </div>
         </div>
         <!-- /Messages Box Part -->
 
