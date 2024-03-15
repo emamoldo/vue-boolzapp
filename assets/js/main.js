@@ -77,6 +77,7 @@ createMessages({
             ],
         }
     },
+    
     methods: {
         addMessages() {
             console.log(this.newMessages);
