@@ -11,12 +11,12 @@ Milestone 2
 messaggi relativi al contatto attivo all’interno del pannello della conversazione
 
 ### container_right
-- need to change the profile image, the name, the access // did the name and the access --> need to change the imgs
-- need to change the messages in the chat                // needs to have messages in the chat and after check the Milesone 3
+- need to change the profile image, the name, the access // did it
 
 ● Click sul contatto mostra la conversazione del contatto cliccato
 ### .contacts
-- need to add the @click on the .contacts                // did it
+- need to add the @click on the .contacts                // did the click
+- need to change the messages in the chat                // need to chage the image, the messages, the name and di access
 
 
 Milestone 3

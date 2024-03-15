@@ -60,7 +60,7 @@
                 <div id="contacts">
                     <section class="contacts" @click="next()" v-for="contact in contacts">
                         <!-- <img class="profile_img" src="./assets/img/avatar_1.jpg" alt=""> -->
-                        <img class="profile_img" v-bind:src="contacts[activeImage].image" alt="" />
+                        <img class="profile_img" v-bind:src="contact.image" alt="" />
                         <div class="meta">
                             <div class="img_text">
                                 <strong class="name">{{contact.name}}<p class="hour">{{contact.hour}}</p></strong>
@@ -69,7 +69,6 @@
                         </div>
                     </section>
                 </div>
-                <!-- TODO: Search how to fix the images -->
 
                 <!-- /Contacts Part -->
 
@@ -100,28 +99,31 @@
 
                 <!-- Messages Part -->
 
-                <section class="messages">
-                    <div class="sent" v-for="message in messages">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
-                        commodi illum temporibus voluptates iste nostrum laudantium.
-
-                        {{message}}
-                    </div>
-                    <div class="recived">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio placeat cum voluptate recusandae
-                        repellendus praesentium atque culpa possimus quaerat eaque?
-                    </div>
-                </section>
-
-                <!-- Try to use message in messages doing another createApp in Js -->
-                <!-- <section class="messages" v-for="contact in contacts">
+                <!-- <section class="messages">
                     <div class="sent">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
                         commodi illum temporibus voluptates iste nostrum laudantium.
                     </div>
                     <div class="recived">
-                        {{contact.message}}
-                    </div> -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio placeat cum voluptate recusandae
+                        repellendus praesentium atque culpa possimus quaerat eaque?
+                    </div>
+                </section> -->
+
+                <!-- Try to use message in messages doing another createApp in Js -->
+
+                <div id="messages">
+                    <section class="messages" v-for="contact in contacts">
+                        <div class="sent">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
+                            commodi illum temporibus voluptates iste nostrum laudantium.
+                        </div>
+                        <div class="recived">
+                            {{message}}
+                        </div>
+                    </section>
+                </div>
+        
 
             </div>
             <!-- /Messages Part -->
