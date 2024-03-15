@@ -59,8 +59,9 @@ createApp({
             // after doing that the click had to change the messagges in the chat
             this.activeImage--
             if (this.activeImage < 0) {
-                this.activeImage = this.gameImages.image.length - 1
-            
+                this.activeImage = this.contacts.image
+            }
+
         },
         addMessages() {
             console.log(this.newMessages);
