@@ -101,9 +101,11 @@
                 <!-- Messages Part -->
 
                 <section class="messages">
-                    <div class="sent">
+                    <div class="sent" v-for="message in messages">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officia minus tempore delectus
                         commodi illum temporibus voluptates iste nostrum laudantium.
+
+                        {{message}}
                     </div>
                     <div class="recived">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio placeat cum voluptate recusandae
@@ -130,7 +132,7 @@
                     <i class="far fa-smile"></i>
                 </div>
                 <div class="message">
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" v-model="addMessages" placeholder="Scrivi un messaggio" @keyup.enter="addMessages()">
                 </div>
                 <div class="microphone">
                     <i class="fas fa-microphone"></i>

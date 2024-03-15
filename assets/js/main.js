@@ -1,11 +1,11 @@
-console.log('works');
-
 const { createApp } = Vue
 
 createApp({
     data() {
         return {
             activeImage: 0,
+            newMessages: '',
+
             contacts: [
                 {
                     image: 'assets/img/avatar_1.jpg',
@@ -57,6 +57,13 @@ createApp({
             console.log('prossimo contatto');
             // at the click in the .contact_name the program need to change the name, the img and the access
             // after doing that the click had to change the messagges in the chat
+            this.activeImage--
+            if (this.activeImage < 0) {
+                this.activeImage = this.gameImages.image.length - 1
+            
+        },
+        addMessages() {
+            console.log(this.newMessages);
         }
     }
 }).mount('#contacts')
